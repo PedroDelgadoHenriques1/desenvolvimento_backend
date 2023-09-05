@@ -3,27 +3,14 @@
     
 <link rel="stylesheet" href= "{% static "usipav\css\form.css" %}"/>
 
-<div class="alinhamento">
-    
-    
-    <form action="/your-name/" method="post">
-        <div class = "titulo">Pedrão</div>
-        <label for="nome">
-            Seu Nome 
-        </label>
-        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
-        <label for="your_name">
-            Seu sobrenome
-        </label>
-        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
-        <label for="your_name">
-            cpf
-        </label>
-        <input id="your_name" type="number" name="your_name" value="{{ current_name }}">
-        <label for="your_name">
-            Descrição
-        </label>
-        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+<div class="container">
+    <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
         <div class="central "><input class="butao" type="submit" value="Enviar"></div>
     </form>
+</div>
+
+<div>
+    
 </div>

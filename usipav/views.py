@@ -1,6 +1,7 @@
 from django.shortcuts import render
-
 from django.http import HttpResponse
+from . import form
+from django import forms
 
 
 def index(request):
@@ -15,6 +16,21 @@ def londrina(request):
 def filmes(request):
     return render(request, 'filmes.html')
 
-def form(request):
-    return render(request, 'form.html')
+def _form(request):
+    form2 = form.NameForm()
+        # Check to see if we get a post back.
+    if request.method == "POST":
+        # In which case we pass in that request.
+        form2 = form.NameForm(request.POST)
+
+        # Check to see form is valid
+        if form2.is_valid():
+            # Do something.
+            print("Form Validation Sucess. Print in console.")
+            print("Nome: "+form2.cleaned_data["nome"])
+            print("Sobrenome: "+form2.cleaned_data["sobrenome"])
+            print("Cpf: "+form2.cleaned_data["cpf"])
+            print("Descrição: "+form2.cleaned_data["descricao"])
+            print("verificar_nome: "+form2.cleaned_data["verify_nome"])
+    return render(request, 'form.html',{"form":form2})
 

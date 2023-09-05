@@ -7,5 +7,5 @@ urlpatterns = [
     path("calculadora", views.calculadora, name="calculadora"),
     path("londrina", views.londrina, name="londrina"), 
     path("filmes", views.filmes, name="filmes"),
-    path("form", views.form, name="form"), 
+    path("form", views._form, name="form"), 
 ]
