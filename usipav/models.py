@@ -26,13 +26,13 @@ class RegistroAcesso(models.Model):
     def __str__(self):
         return str(self.data_acesso)
 
-class Form(models.Model):
-    nome = models.CharField(max_length=140, default='SOME STRING')
-    sobrenome = models.CharField(max_length=140, default='SOME STRING')
-    cpf = models.NumberField(max_length=140, default='SOME STRING')
-    nome = models.CharField(max_length=140, default='SOME STRING')
-    verify_nome =  models.CharField(max_length=140, default='SOME STRING')
+#class Form(models.Model):
+#    nome = models.CharField(max_length=140, default='SOME STRING')
+#    sobrenome = models.CharField(max_length=140, default='SOME STRING')
+#    cpf = models.NumberField(max_length=140, default='SOME STRING')
+#    nome = models.CharField(max_length=140, default='SOME STRING')
+#    verify_nome =  models.CharField(max_length=140, default='SOME STRING')
     
     
-    def __str__(self):
-        return str(self.data_acesso)
+#    def __str__(self):
+#        return str(self.data_acesso)
