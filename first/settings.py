@@ -1,3 +1,4 @@
+import os
 """
 Django settings for first project.
 
@@ -25,7 +26,10 @@ SECRET_KEY = 'django-insecure-@8ui-7-+)911*5j@i4&)3p0vgz72r(278h7+9pu@w*om=qqpb=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "lucasbg2.pythonanywhere.com"
+]
 
 
 # Application definition
@@ -126,3 +130,4 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
