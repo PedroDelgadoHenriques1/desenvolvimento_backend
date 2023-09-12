@@ -35,4 +35,4 @@ class Pessoa(models.Model):
     
     
     def __str__(self):
-        return str(self.data_acesso)
+        return str(self.nome)
