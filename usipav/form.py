@@ -1,5 +1,6 @@
 from django import forms
 from django.core import validators
+from .models import Pessoa
 
 class NameForm(forms.Form):
     nome = forms.CharField(label="Your name", max_length=100)
@@ -31,4 +32,11 @@ class NameForm(forms.Form):
 #   if value[0].lower() != "z":
 #        raise forms.ValidationError("NAME NEEDS TO START WITH Z")
 
-  
+
+class MyNewForm(forms.ModelForm):
+    #FORM FIELD GO HERE
+    class Meta:
+        model = Pessoa
+        fields = "__all__"
+
+

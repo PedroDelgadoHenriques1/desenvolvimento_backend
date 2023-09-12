@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from . import form
 from django import forms
+from .form import MyNewForm
 
 
 def index(request):
@@ -33,4 +34,18 @@ def _form(request):
             print("Descrição: "+form2.cleaned_data["descricao"])
             print("verificar_nome: "+form2.cleaned_data["verify_nome"])
     return render(request, 'form.html',{"form":form2})
+
+def form_produto(request):
+    form = MyNewForm()
+
+    if request.method == "POST":
+        form = MyNewForm(request.POST)
+        if form.is_valid():
+            form.save(commit=True)
+            return index(request)
+        else:
+            print("Vish, deu erro")
+
+    return render(request, "modelform.html", context={"form":form })
+
 
