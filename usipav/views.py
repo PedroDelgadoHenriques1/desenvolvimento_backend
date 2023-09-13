@@ -48,4 +48,6 @@ def form_produto(request):
 
     return render(request, "modelform.html", context={"form":form })
 
+def base(request):
+    return render(request, 'base.html')
 
