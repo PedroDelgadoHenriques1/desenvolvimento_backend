@@ -3,6 +3,7 @@
 
 <html lang="en">
 <head>
+  {% block body_block2 %}
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+  {% endblock %}s
 </head>
 <body>
     
@@ -41,7 +43,13 @@
        
     </div>
 
+    <footer class="bg-dark text-white text-center p-3 fixed-bottom">
+      <!-- Conteúdo do Rodapé -->
+      <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+  </footer>
     {% block body_block %}
     {% endblock %}
+
+   
 </body>
 </html>
