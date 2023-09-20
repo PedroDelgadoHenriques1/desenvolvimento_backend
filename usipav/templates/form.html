@@ -7,7 +7,11 @@
     
 <link rel="stylesheet" href= "{% static "usipav\css\form.css" %}"/>
 
+{% block body_block %}
 <div class="container">
+    
+
+    
     <form method="POST">
         {{ form.as_p }}
         {% csrf_token %}
@@ -18,3 +22,5 @@
 <div>
     
 </div>
+
+{% endblock %}

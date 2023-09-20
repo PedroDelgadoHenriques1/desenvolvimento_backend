@@ -1,7 +1,12 @@
+{% extends "base.html"%}
+
 <!DOCTYPE html>
 {% load static %}
 <html lang="pt-BR">
   <head>
+    {% block body_block2 %}
+
+    
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -23,8 +28,12 @@
     <link rel="stylesheet" href= "{% static "usipav/index.css" %}"/>
 
     <title>Harry Potter Page!</title>
+
+    {% endblock %}
   </head>
   <body onload="build()">
+    {% block body_block %}
+
     <nav class="navbar navbar-expand-lg minha-navbar">
       <button
         class="navbar-toggler"
@@ -176,5 +185,7 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
+
+    {% endblock %}
   </body>
 </html>
