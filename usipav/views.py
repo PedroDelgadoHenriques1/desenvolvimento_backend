@@ -51,3 +51,5 @@ def form_produto(request):
 def base(request):
     return render(request, 'base.html')
 
+def base(request):
+    return render(request, 'informacao.html')
