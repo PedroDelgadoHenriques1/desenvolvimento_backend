@@ -11,5 +11,5 @@ urlpatterns = [
     path("form", views._form, name="form"), 
     path("modelform", views.form_produto, name="modelform"),
     path("base", views.base, name="base"),
-    path("informacao", views.base, name="informacao")
+    path("informacao", views.informacao, name="informacao")
 ]
