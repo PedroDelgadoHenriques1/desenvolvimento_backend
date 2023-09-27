@@ -13,3 +13,4 @@ urlpatterns = [
     path("base", views.base, name="base"),
     path("informacao", views.informacao, name="informacao")
 ]
+
