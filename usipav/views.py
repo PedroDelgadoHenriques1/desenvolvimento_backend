@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from . import form
 from django import forms
 from .form import MyNewForm
+from .models import Pagina
 
 
 def index(request):
@@ -52,4 +53,9 @@ def base(request):
     return render(request, 'base.html')
 
 def informacao(request):
-    return render(request, 'informacao.html')
+    context = {
+    'Pagina': Pagina.objects.all()
+    }
+    return render(request, 'informacao.html', context=context)
+
+

@@ -9,15 +9,17 @@
 <body>
     {% block body_block %}
 
-{% for acesso in lista_acesso %}
+{% for i in Pagina %}
+
     <tr>
-        <td>{{ acesso.pagina }}</td>
-        <td> {{ acesso.data }} </td>
+        <td>{{ i.name }}</td>
+        <td> {{ i.Topico }} </td>
+        <td> {{ i.url }}</td>
     </tr>
+    <br>
 
 {% endfor %}
 
-<h1>aAA</h1>
 
     {% endblock %}
 </body>
