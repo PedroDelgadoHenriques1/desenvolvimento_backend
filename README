@@ -1,5 +1,8 @@
 pacotes manuais
 
+requirements - pip install -r ./requirements.txt (colocar dependencias uma embaixo da outra) 
+dependencias
+pip install pillow
 pip install django-debug-toolbar
 
 Exemplo: Tópicos, Sites e Acessos
