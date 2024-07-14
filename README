@@ -1,20 +1,7 @@
-pacotes manuais
+Repositório sobre projeto de faculdade solução de problema de empresa de asfalto
 
-requirements - pip install -r ./requirements.txt (colocar dependencias uma embaixo da outra) 
-dependencias
-pip install pillow
-pip install django-debug-toolbar
+Objetivo: Manuseio de abastecimento com pedras dentro de moegas quentes fazendo mistura e entrando no forno para junto de uma mistura fazer uma fabricação de um piche de qualidade
 
-Exemplo: Tópicos, Sites e Acessos
-■ Criando uma modelagem de tópicos, sites e acessos
-■ Usando os comandos migrate e makemigrations (onde o Django
-irá atualizar o banco de dados a partir da definição das nossas
-classes Python)
 
-Ao alterar models depois de criar usuario/senha
-o python manage.py migrate
-o python manage.py makemigrations app1
-o python manage.py migrate
-■ A partir de então, temos o nosso banco de dados e podemos
-experimentar com ele (com o console python e com as IDEs)
-o E também com o Admin como veremos a seguir
+
+
